@@ -9,7 +9,10 @@ The objective is to create a function which is able to return the current stock 
 - The function must match the following signature: `(sku: string) => Promise<{ sku: string, qty: number }>`.
 - The function must read from the `stock` and `transactions` files on each invocation (totals cannot be precomputed)
 - The function must throw an error where the SKU does not exist in the `transactions.json` and `stock.json` file
-- All code must be adequately tested
+- All code must be adequately tested (Not payload based testing instead logic should be tested)
+- A simple web UI/ view should be implemented for viewing the individual SKU's information. It can just return a JSON response in the browser based on the SKU passed in query string
+- Typescript should be used and the implementation should be clean.
+- Code has to be well structured and well containerised. 
 
 Notes:
 - Transactions may exist for SKUs which are not present in `stock.json`. It should be assumed that the starting quantity for these is 0.
